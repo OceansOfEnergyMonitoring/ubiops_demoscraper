@@ -5,7 +5,6 @@ class and 'request' method.
 
 # Always use absolute imports when importing modules from the deployment package directory. For example
 # `import my_module` instead of `import .my_module`
-import random
 import os
 import pandas as pd
 

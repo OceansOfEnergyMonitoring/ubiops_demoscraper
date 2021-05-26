@@ -3,4 +3,4 @@
 #
 # Example:
 # requests==2.24.0
-pandas
+pandas==1.2.1
