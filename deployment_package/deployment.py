@@ -32,6 +32,7 @@ class Deployment:
         fn = "rws_windspeed_example.csv"
         path = base_directory + "\\" + fn
         self.mockup_payload = pd.read_csv(os.path.join(base_directory,fn),sep=';',header='infer')
+        print("mockup csv loaded")
         print(self.mockup_payload.head(1))
 
         #load environment variables
@@ -52,12 +53,11 @@ class Deployment:
         """
 
         print("Processing request for My Deployment")
+    
         
-
-        print(self.mockup_payload.head(1))
-        
-        out_dict = {"output" : self.mockup_payload.head(1)}
-
+        out_dict = {"output" : self.mockup_payload.head(1).to_dict()}
+        print("out dict: ")
+        print(out_dict)
 
         # You can run any code to handle the request here.
 
