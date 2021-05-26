@@ -55,7 +55,8 @@ class Deployment:
         print("Processing request for My Deployment")
     
         
-        out_dict = {"output" : self.mockup_payload.head(1).to_dict()}
+        #out_dict = {"output" : self.mockup_payload.head(1).to_dict()}
+        out_dict = {"output"  : 6.72172175623384}
         print("out dict: ")
         print(out_dict)
 
