@@ -36,6 +36,10 @@ def main():
     df_input = pd.read_csv(fn_input,sep=';',header='infer')
     inputdata = df_input.to_json(orient='split')
 
+    """
+    INPUT EXAMPLE:
+'{"columns":["Datum","Tijd","Parameter","Locatie","Waarde","Verwachting","Eenheid","Windrichting","Windrichting eenheid","Bemonsteringshoogte","Referentievlak","Unnamed: 11"],"index":[0,1,2,3],"data":[["28-4-2021","13:30:00","Windsnelheid Lucht t.o.v. Mean Sea Level in m\\/s","Europlatform",8.65,null,"m\\/s",19.7,"graden",2910,"NVT",null],["28-4-2021","13:40:00","Windsnelheid Lucht t.o.v. Mean Sea Level in m\\/s","Europlatform",8.86,null,"m\\/s",18.3,"graden",2910,"NVT",null],["28-4-2021","13:50:00","Windsnelheid Lucht t.o.v. Mean Sea Level in m\\/s","Europlatform",8.89,null,"m\\/s",15.4,"graden",2910,"NVT",null],["28-4-2021","14:00:00","Windsnelheid Lucht t.o.v. Mean Sea Level in m\\/s","Europlatform",8.72,null,"m\\/s",13.2,"graden",2910,"NVT",null]]}'
+    """
     # Adjust this example to test deployment input and request processing
     input_data = {
         "input" : inputdata,
