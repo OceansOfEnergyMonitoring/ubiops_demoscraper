@@ -68,17 +68,12 @@ class Deployment:
         #determine destination path on Sharepoint
         spFolderpath = data['spfolderpath']
         spFilename = data['spfilename']
-
         print("Exporting; ", spFilename, "to: ", spFolderpath)
 
-        #DEBUG:prepare a local mockup csv and load as pandas dataframe, overwrite spFilename key to the mockup file
-        spFilename = "rws_windspeed_example.csv"
-        
+        # convert dataframe to local csv file
+        payload = pd.read_json(data['input'], orient='split')     
         path = self.base_directory + "\\" + spFilename
-        
-        #check if filepath is valid
-        self.mockup_payload = pd.read_csv(os.path.join(self.base_directory,spFilename),sep=';',header='infer')
-        print("mockup csv loaded: " + str(self.mockup_payload.head(1)))
+        payload.to_csv(path)
 
         #upload csv file to sharepoint, # a directories will be created if they do not exist yet
         out = self.upload_sp(self.base_directory, self.sharepoint_base_url, self.sharepoint_site, spFolderpath, spFilename)

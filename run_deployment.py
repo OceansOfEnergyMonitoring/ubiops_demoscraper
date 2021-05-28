@@ -5,7 +5,9 @@ in a deployment package.
 
 import os
 import sys
+import pandas as pd
 
+fn_input = "rws_windspeed_example.csv"
 
 # Deployment_directory points to base folder of the deployment, which should therefore be called 'deployment_package'.
 deployment_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'deployment_package')
@@ -30,8 +32,13 @@ def main():
     # In case of deployments with structured data, it will contain the keys defined by the user upon deployment
     # creation via the platform. In case of a deployment that receives a plain input, it will be a string.
 
+    # load in a dataFrame to push to the deployment, to simulate serialized pandas dataframe 
+    df_input = pd.read_csv(fn_input,sep=';',header='infer')
+    inputdata = df_input.to_json(orient='split')
+
     # Adjust this example to test deployment input and request processing
     input_data = {
+        "input" : inputdata,
         "spfolderpath": '07 OMM/47 Data Logging/UbiOpsdata/',
         "spfilename" : "rws_windspeed_example.csv"  
     }
