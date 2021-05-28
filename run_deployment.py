@@ -13,10 +13,8 @@ deployment_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), 
 # Update $PATH with the deployment base directory and libraries before importing the deployment package.
 sys.path = [deployment_directory, os.path.join(deployment_directory, 'libraries')] + sys.path
 
-
 # Import the deployment package
 import deployment_package.deployment
-
 
 def main():
     print("Starting deployment request example")
@@ -34,7 +32,8 @@ def main():
 
     # Adjust this example to test deployment input and request processing
     input_data = {
-        'input': 10.9
+        "spFolderpath": '07 OMM/47 Data Logging/UbiOpsdata/',
+        "spFilename" : "rws_windspeed_example.csv"  
     }
 
     # Make the prediction. The platform calls this method in exactly the same way
