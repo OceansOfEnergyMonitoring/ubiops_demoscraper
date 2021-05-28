@@ -33,7 +33,7 @@ def main():
     # Adjust this example to test deployment input and request processing
     input_data = {
         "spfolderpath": '07 OMM/47 Data Logging/UbiOpsdata/',
-        "spfolderpath" : "rws_windspeed_example.csv"  
+        "spfilename" : "rws_windspeed_example.csv"  
     }
 
     # Make the prediction. The platform calls this method in exactly the same way

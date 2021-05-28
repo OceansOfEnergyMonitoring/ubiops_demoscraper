@@ -62,12 +62,12 @@ class Deployment:
         """
         # expected input variables;
         # payload
-        # SpFlderpath; full folder path from site onwards, ex: '07 OMM/47 Data Logging/UbiOpsdata/'
+        # SpFolderpath; full folder path from site onwards, ex: '07 OMM/47 Data Logging/UbiOpsdata/'
         # spFilename; target filename including extensions, ex: 'rws_windspeed_example.csv'
 
         #determine destination path on Sharepoint
-        spFolderpath = data['spFolderpath']
-        spFilename = data['spFilename']
+        spFolderpath = data['spfolderpath']
+        spFilename = data['spfilename']
 
         print("Exporting; ", spFilename, "to: ", spFolderpath)
 
