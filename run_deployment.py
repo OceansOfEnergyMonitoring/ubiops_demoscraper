@@ -7,7 +7,7 @@ import os
 import sys
 import pandas as pd
 
-fn_input = "rws_windspeed_example.csv"
+fn_input = "short_rws_windspeed_example.csv"
 
 # Deployment_directory points to base folder of the deployment, which should therefore be called 'deployment_package'.
 deployment_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'deployment_package')

@@ -1,0 +1,5 @@
+Datum;Tijd;Parameter;Locatie;Waarde;Verwachting;Eenheid;Windrichting;Windrichting eenheid;Bemonsteringshoogte;Referentievlak;
+28-4-2021;13:30:00;Windsnelheid Lucht t.o.v. Mean Sea Level in m/s;Europlatform;8.65;;m/s;19.70;graden;2910;NVT;
+28-4-2021;13:40:00;Windsnelheid Lucht t.o.v. Mean Sea Level in m/s;Europlatform;8.86;;m/s;18.30;graden;2910;NVT;
+28-4-2021;13:50:00;Windsnelheid Lucht t.o.v. Mean Sea Level in m/s;Europlatform;8.89;;m/s;15.40;graden;2910;NVT;
+28-4-2021;14:00:00;Windsnelheid Lucht t.o.v. Mean Sea Level in m/s;Europlatform;8.72;;m/s;13.20;graden;2910;NVT;

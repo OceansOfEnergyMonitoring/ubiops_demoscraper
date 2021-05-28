@@ -72,7 +72,7 @@ class Deployment:
 
         # convert dataframe to local csv file
         payload = pd.read_json(data['input'], orient='split')     
-        path = self.base_directory + "\\" + spFilename
+        path = self.base_directory + "/" + spFilename
         payload.to_csv(path)
 
         #upload csv file to sharepoint, # a directories will be created if they do not exist yet
